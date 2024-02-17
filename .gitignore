@@ -1,2 +1,4 @@
 serviceAccoutKey.json
 /node_modules
+/dist
+*.json
