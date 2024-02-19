@@ -15,6 +15,8 @@ export class ProductRepository{
               uid:doc.id
             }
           })
+        }).catch(e =>{
+          return e
         })
   }
 
@@ -27,6 +29,8 @@ export class ProductRepository{
           return snapshot.docs.map(doc =>{
             return doc.data().products.find(product => product.id === id ) ?? "product-not-found"
           })
+        }).catch(e =>{
+          return e
         })
   }
 
@@ -38,6 +42,8 @@ export class ProductRepository{
       products: admin.firestore.FieldValue.arrayUnion(product)
     }).then(() =>{
       return {product,userUid}
+    }).catch(e =>{
+      return e
     })
   }
 
@@ -55,6 +61,8 @@ export class ProductRepository{
     })
     .then( () => {
       return productToUpdate
+    }).catch(e =>{
+      return e
     })
   }
 
@@ -69,6 +77,8 @@ export class ProductRepository{
     })
     .then( () => {
       return productToDeleteId
+    }).catch(e =>{
+      return e
     })
   }
 }

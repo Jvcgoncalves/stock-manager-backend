@@ -1,8 +1,10 @@
 import express from "express"
 import admin from "firebase-admin"
 import { authenticateJwt } from "../middleware/authenticate-jwt.js"
-import { UserController } from "./controller.js"
+import { UserController } from "./userscontroller.js"
+import * as functions from 'firebase-functions';
 import cors from 'cors';
+
 const app = express()
 
 const userController = new UserController()
@@ -33,4 +35,4 @@ app.delete("/:id",
   (request,response) => userController.deleteProduct(request,response)
 )
 
-export const productsRouter = app 
+export const productsRouter = functions.https.onRequest(app);
