@@ -26,6 +26,7 @@ It was my first project working with backend and i learnig at the same time that
 ## How to use
 
 ### 1 - Fisrt you need to create an acount, database and auth on firebase, after that you need to go to project config and set your service key.
+
 ### 1.1 - you can follow the docs from firebase to get it, after you get your service key you key paste at your directory files or at environment variables on site that you used to deploy. In both of then you service key will be saved like this json
 ↓ ↓ ↓ ↓ ↓
 
@@ -46,7 +47,7 @@ It was my first project working with backend and i learnig at the same time that
 #### 1.1.1 - If you save like environment variables you need to treat the same way that i
 #### 1.1.2 - Else you can let this way ↓ ↓ ↓ ↓ ↓
 
-...
+... 
 
 import { service_key } from "./serviceAccoutKey.js";
 
@@ -54,7 +55,7 @@ admin.initializeApp({
   credential: admin.credential.cert(service_key),
 });
 
-...
+... 
 
 ##### 1.1.2 - ... You  need to save like the obeject that a show above IF you wanna to deploy this site, if you just wan't to use in your machine you just need to save the json that firebase gives to your and put like this ↓ ↓ ↓ ↓ ↓
 
@@ -62,9 +63,20 @@ admin.initializeApp({
   credential: admin.credential.cert("PATH TO YOUR JSON FILE WITH KEY"),
 });
 
+## Links
+
+- Deploy on netlify: https://stock-storejvgc.netlify.app/
+- Repository: https://github.com/Jvcgoncalves/stock-manager
+  - In case of bugs or suggestions contact goncalvesdacosta05@gmail.com
+
+## Versioning
+
+1.2.0.0
+
 ## Authors
 
 - **João Vitor Gonçalves da Costa**
 
 Please follow github and linkdin (link in my profile )!
 Thanks to visiting me and good coding!
+
