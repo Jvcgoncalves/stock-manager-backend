@@ -9,7 +9,6 @@ const port = process.env.PORT || 3000
 app.use(cors());
 
 admin.initializeApp({
-  serviceAccountId:"firebase-adminsdk-wvo5b@stock-store-1b54d.iam.gserviceaccount.com",
   credential: admin.credential.cert(allKey),
   databaseURL: 'https://stock-store.firebaseio.com'
 });
@@ -18,7 +17,7 @@ app.use(json())
 
 app.use('/users', productsRouter)
 
-app.listen(port,() => {})
+app.listen(port)
 
 export default app
 
